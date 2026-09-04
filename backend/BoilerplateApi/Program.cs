@@ -10,7 +10,7 @@ using BoilerplateApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services
-builder.Services.AddControllers();
+builder.Services.AddControllers(); 
 builder.Services.AddEndpointsApiExplorer();
 
 // Swagger with JWT support
