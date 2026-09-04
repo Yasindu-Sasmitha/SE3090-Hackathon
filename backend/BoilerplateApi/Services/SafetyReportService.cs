@@ -12,7 +12,7 @@ namespace BoilerplateApi.Services
 
         public async Task<IEnumerable<SafetyReportDto>> GetAllAsync()
         {
-            return await _db.SafetyReports
+            return await _db.SafetyReports 
                 .OrderByDescending(r => r.ReportedAt)
                 .Select(r => new SafetyReportDto(r.Id, r.Title, r.Category, r.Location, r.Description, r.Severity, r.Status, r.ReportedAt))
                 .ToListAsync();
