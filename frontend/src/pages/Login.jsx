@@ -77,13 +77,13 @@ export default function Login() {
 
   return (
     <div className="container" style={{ padding: '3rem 1.25rem' }}>
-      <div 
-        style={{ 
-          maxWidth: '480px', 
-          margin: '0 auto', 
-          background: '#fff', 
-          border: '1px solid var(--border-color)', 
-          borderRadius: 'var(--radius-lg)', 
+      <div
+        style={{
+          maxWidth: '480px',
+          margin: '0 auto',
+          background: '#fff',
+          border: '1px solid var(--border-color)',
+          borderRadius: 'var(--radius-lg)',
           boxShadow: 'var(--shadow-lg)',
           overflow: 'hidden'
         }}
@@ -102,11 +102,11 @@ export default function Login() {
         <div style={{ padding: '0.75rem 1.25rem', background: '#ecfdf5', borderBottom: '1px solid #a7f3d0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
           <div style={{ fontSize: '0.8rem', color: '#065f46' }}>
             💡 <strong>Hackathon Demo Admin:</strong><br />
-            <code>admin@safelk.gov.lk</code> / <code>Admin123!</code>
+            <code>admin@safelk.gov.lk</code>
           </div>
-          <button 
-            type="button" 
-            onClick={handleAutofillDemo} 
+          <button
+            type="button"
+            onClick={handleAutofillDemo}
             className="btn btn-sm btn-emerald"
             style={{ fontSize: '0.75rem', padding: '0.3rem 0.6rem' }}
           >
@@ -117,7 +117,7 @@ export default function Login() {
         <div style={{ padding: '1.75rem' }}>
           {/* Tab Switcher */}
           <div style={{ display: 'flex', borderBottom: '2px solid var(--slate-100)', marginBottom: '1.5rem' }}>
-            <button 
+            <button
               type="button"
               onClick={() => { setIsRegistering(false); setAuthError(''); }}
               style={{
@@ -134,7 +134,7 @@ export default function Login() {
             >
               Sign In
             </button>
-            <button 
+            <button
               type="button"
               onClick={() => { setIsRegistering(true); setAuthError(''); }}
               style={{
@@ -169,10 +169,10 @@ export default function Login() {
             {isRegistering && (
               <div className="form-group">
                 <label className="form-label">Full Name / Department</label>
-                <input 
-                  type="text" 
-                  className="form-input" 
-                  placeholder="e.g. Officer K. Perera (CMC)" 
+                <input
+                  type="text"
+                  className="form-input"
+                  placeholder="e.g. Officer K. Perera (CMC)"
                   {...register('name')}
                 />
                 {errors.name && <div className="form-error">{errors.name.message}</div>}
@@ -181,10 +181,10 @@ export default function Login() {
 
             <div className="form-group">
               <label className="form-label">Official Email</label>
-              <input 
-                type="email" 
-                className="form-input" 
-                placeholder="officer@safelk.gov.lk" 
+              <input
+                type="email"
+                className="form-input"
+                placeholder="officer@safelk.gov.lk"
                 {...register('email')}
               />
               {errors.email && <div className="form-error">{errors.email.message}</div>}
@@ -192,18 +192,18 @@ export default function Login() {
 
             <div className="form-group">
               <label className="form-label">Password</label>
-              <input 
-                type="password" 
-                className="form-input" 
-                placeholder="••••••••" 
+              <input
+                type="password"
+                className="form-input"
+                placeholder="••••••••"
                 {...register('password')}
               />
               {errors.password && <div className="form-error">{errors.password.message}</div>}
             </div>
 
-            <button 
-              type="submit" 
-              className="btn btn-primary" 
+            <button
+              type="submit"
+              className="btn btn-primary"
               style={{ width: '100%', marginTop: '0.75rem' }}
               disabled={isSubmitting}
             >
