@@ -23,5 +23,6 @@ namespace BoilerplateApi.Dtos
         string Severity, 
         string Status, 
         DateTime ReportedAt
+        
     );
 }
