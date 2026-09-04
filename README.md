@@ -1,4 +1,4 @@
-# SafeLK (සැලකිලිමත් / பாதுகாப்பான இலங்கை)
+# SafeLK 
 ### Sri Lanka Community Safety & Hazard Reporting System
 > **SE3090 Mini Hackathon 2026 — Build for Sri Lanka**
 
