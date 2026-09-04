@@ -12,20 +12,20 @@ export default function Navbar({ onOpenReportModal, onOpenEmergencyModal }) {
           <span className="brand-flag" role="img" aria-label="Sri Lanka">🇱🇰</span>
           <div>
             <span>SafeLK</span>
-            <span className="brand-subtitle">සැලකිලිමත් • Community Safety</span>
+            <span className="brand-subtitle">Community Safety</span>
           </div>
         </Link>
 
         <div className="nav-links">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
           >
             Explore Hazards
           </Link>
 
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={onOpenEmergencyModal}
             className="btn btn-sm btn-outline"
             style={{ color: '#dc2626', borderColor: '#fecdd3', background: '#fff1f2' }}
@@ -33,16 +33,16 @@ export default function Navbar({ onOpenReportModal, onOpenEmergencyModal }) {
             🚨 Emergency (119 / 1990)
           </button>
 
-          <button 
-            type="button" 
+          <button
+            type="button"
             onClick={onOpenReportModal}
             className="btn btn-sm btn-emerald"
           >
             + Report Hazard
           </button>
 
-          <Link 
-            to="/admin" 
+          <Link
+            to="/admin"
             className={`nav-link ${location.pathname === '/admin' ? 'active' : ''}`}
           >
             Authority Portal
