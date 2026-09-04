@@ -67,3 +67,4 @@ export default function Navbar({ onOpenReportModal, onOpenEmergencyModal }) {
     </header>
   );
 }
+
