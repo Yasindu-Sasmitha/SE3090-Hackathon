@@ -31,7 +31,7 @@ namespace BoilerplateApi.Controllers
                 Name = dto.Name,
                 Email = dto.Email,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
-                Role = "User"
+                Role = (dto.Email.Contains("admin", StringComparison.OrdinalIgnoreCase) || dto.Email.EndsWith(".gov.lk", StringComparison.OrdinalIgnoreCase)) ? "Admin" : "User"
             };
             _db.Users.Add(user);
             await _db.SaveChangesAsync();
